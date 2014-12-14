@@ -69,8 +69,9 @@ class QbSpider(scrapy.Spider):
             item['html'] = tr.extract()
             item['store_id'] = tr.css('::attr(id)').re(r'tr(\d+)')[0]
             item['signal'] = tr.css('img.store-light::attr(src)').re(r'light-(\w+)')[0]
-            item['num_waiting'], item['num_available'] = \
-                tr.css('p.store-avail::text').re(r'待ち人数：(.*?)名  /  稼働席数：(.*?)席')
+            if item['signal'] != 'none':
+                item['num_waiting'], item['num_available'] = \
+                    tr.css('p.store-avail::text').re(r'待ち人数：(.*?)名  /  稼働席数：(.*?)席')
             item['timestamp'] = now
 
             return store, item
