@@ -15,3 +15,6 @@ NEWSPIDER_MODULE = 'qbmeter.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'qbmeter (+http://www.yourdomain.com)'
+
+DOWNLOAD_DELAY = 1.0
+RANDOMIZE_DOWNLOAD_DELAY = False

@@ -8,7 +8,19 @@
 import scrapy
 
 
-class QbmeterItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class Store(scrapy.Item):
+    id = scrapy.Field()
+    url = scrapy.Field()
+    name = scrapy.Field()
+    latitude = scrapy.Field()
+    longitude = scrapy.Field()
+    timestamp = scrapy.Field()
+
+
+class Availability(scrapy.Item):
+    store_id = scrapy.Field()
+    signal = scrapy.Field()
+    html = scrapy.Field()
+    num_available = scrapy.Field()
+    num_waiting = scrapy.Field()
+    timestamp = scrapy.Field()
