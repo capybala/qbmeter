@@ -12,7 +12,7 @@ from ..items import Store, Availability
 PAGE_RE = re.compile(r'pid=(\d+)')
 
 
-class QbSpider(scrapy.Spider):
+class QBSpider(scrapy.Spider):
     name = "qb"
     allowed_domains = ["www.qbhouse.co.jp"]
     start_urls = (
