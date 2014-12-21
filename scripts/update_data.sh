@@ -8,9 +8,9 @@ OUTPUT_DIR=$BASE_DIR/output
 
 cd $BASE_DIR
 . venv/bin/activate
-. .env
+. ./.env
 
-ls $OUTPUT_DIR/*.jl | xargs cat | python $SCRIPTS_DIR/insert_into_sqlite3.py $OUTPUT_DIR/qbmeter.sqlite3
+find output/ | grep '\.jl$' | xargs cat | jq -c 'select(has("store_id") and .signal != "none") | del(.html)' | python $SCRIPTS_DIR/insert_into_sqlite3.py $OUTPUT_DIR/qbmeter.sqlite3
 
 python $SCRIPTS_DIR/aggregate.py $OUTPUT_DIR/qbmeter.sqlite3 > $OUTPUT_DIR/qbmeter.json
 

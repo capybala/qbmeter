@@ -8,6 +8,7 @@ Requirements
 
 * Python 2.7
 * Virtualenv
+* [jq](http://stedolan.github.io/jq/)
 
 Usage
 -----
