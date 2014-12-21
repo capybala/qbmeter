@@ -28,7 +28,8 @@ pip install -r requirements.txt
 1. Create Cloudant database e.g. `qbmeter`.
 2. Generate API key for the database.
 3. Grant write access on the database to the API user, and read access to Everyone.
-4. Put `.env` file.
+4. Enable CORS from origin "http://www.qbhouse.co.jp/". See: https://docs.cloudant.com/api/cors.html
+5. Put `.env` file.
 
 ```
 # e.g. CLOUDANT_URL=https://orangain.cloudant.com/qbmeter
