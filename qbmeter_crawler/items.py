@@ -5,6 +5,8 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
+from pprint import pformat
+
 import scrapy
 
 
@@ -24,3 +26,10 @@ class Availability(scrapy.Item):
     num_available = scrapy.Field()
     num_waiting = scrapy.Field()
     timestamp = scrapy.Field()
+
+    def __str__(self):
+        d = dict(self)
+        if len(d['html']) > 200:
+            d['html'] = d['html'][:100] + ' ... ' + d['html'][-100:]
+
+        return pformat(d)
