@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
+img.screenshot {
+	width: 100%;
+	max-width: 480px;
+}
+
+#bookmarklet_url {
+	width: 100%;
+	font-size: 120%;
+}
