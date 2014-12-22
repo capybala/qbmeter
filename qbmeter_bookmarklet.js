@@ -62,9 +62,10 @@
   var table = createTable(storeId);
 
   // Insert the elements into DOM
-  var before = d.querySelector('.customer-notice_detail');
-  before.parentNode.insertBefore(style, before);
-  before.parentNode.insertBefore(table, before);
+  // #box_store-avail is for PC, .box_store-avail is for mobile
+  var before = d.querySelector('#box_store-avail, .box_store-avail');
+  before.parentNode.insertBefore(style, before.nextSibling);
+  before.parentNode.insertBefore(table, before.nextSibling);
 
   // Request congestion data
   var xhr = new XMLHttpRequest();
