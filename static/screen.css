@@ -1,13 +1,143 @@
 * {
 	box-sizing: border-box;
+	font-size: 99%;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 2px;
 }
 
 img.screenshot {
 	width: 100%;
 	max-width: 480px;
+	border: 10px solid #fff;
+	border-radius:30px;
+	/* box-shadow */
+	box-shadow:rgba(133, 133, 133, 0.2) 0px 0px 3px 3px;
+	-webkit-box-shadow:rgba(133, 133, 133, 0.2) 0px 0px 3px 3px;
+	-moz-box-shadow:rgba(133, 133, 133, 0.2) 0px 0px 3px 3px;
 }
 
 #bookmarklet_url {
 	width: 100%;
 	font-size: 120%;
+}
+/* header */
+#header{
+	padding:30px 0 20px;
+	background:#45e7b4;
+	border-bottom:2px solid #55baff;
+}
+#header h1{
+	padding: 60px;
+	width:390px;
+	zoom: 0.5;
+	background: #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+	/* box-shadow */
+	box-shadow:rgba(133, 133, 133, 0.709804) 5px 0px 6px 3px inset;
+	-webkit-box-shadow:rgba(133, 133, 133, 0.709804) 5px 0px 6px 3px inset;
+	-moz-box-shadow:rgba(133, 133, 133, 0.709804) 5px 0px 6px 3px inset;
+}
+#change {
+  background: #f66f6f;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: none;
+  z-index: 9999;
+	padding:30px 0 20px;
+	border-bottom:5px solid #f88f8f;
+	zoom: 0.4;
+}
+#change h1{
+	padding: 60px;
+	width:390px;
+	zoom: 0.5;
+	background: #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+	/* box-shadow */
+	box-shadow:rgba(133, 133, 133, 0.709804) 5px 0px 6px 3px inset;
+	-webkit-box-shadow:rgba(133, 133, 133, 0.709804) 5px 0px 6px 3px inset;
+	-moz-box-shadow:rgba(133, 133, 133, 0.709804) 5px 0px 6px 3px inset;
+}
+
+#intro_area{
+	width: 100%;
+	background: #44a9ef;
+}
+.intro{
+	width: 90%;
+	padding: 50px 0;
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align:center;
+	color: #fff;
+}
+
+/* main */
+#main{
+	text-align:center;
+}
+#main p {
+	width: 90%;
+	max-width: 700px;
+	margin: 0 auto 50px;
+	text-align:left;
+}
+
+#main section{
+	margin-bottom: 30px;
+}
+
+#main section p{
+	margin-bottom: 20px;
+}
+
+#main h2{
+	margin-bottom: 20px;
+	padding: 20px 0;
+	background: #f8d88b;
+	border-top: 1px solid #f8d88b;
+	border-bottom: 1px solid #f8d88b;
+}
+
+#main input[type="text"]{
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto 50px;
+	padding: 10px;
+	height: 80px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	background: #efefef;
+	font-size: 98%;
+}
+#bookmarklet{
+	display:block;
+	width: 150px;
+	margin: 0 auto 20px;
+	padding: 15px 20px;
+	background:#cf8bd2;
+	color: #fff;
+	text-decoration:none;
+	border-radius: 10px;
+}
+#bookmarklet:hover{
+	text-decoration: underline;
+	opacity: 0.8;
+}
+
+/* footer */
+footer{
+	width: 100%;
+	padding: 50px 0;
+	background: #333;
+	color: #fff;
+	text-align: center;
+}
+footer a:visited{
+	color: #fff;
 }

@@ -1,41 +1,53 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>QB Meter | QBハウスで混雑する時間帯を知るためのブックマークレット</title>
-		<link rel="stylesheet" href="static/screen.css">
-	</head>
-	<body>
-		<h1>QB Meter</h1>
-		<p>10分でカットしてくれるQBハウス、手軽ですが10分のために20分待つのは辛いですよね。どうせなら空いてる時間に行ってパパっと切ってもらいたい。そんなあなたのために、時間帯ごとの混雑状況がわかるようにしました。</p>
-
-		<h2>これは何？</h2>
-		<p>QBハウスで混雑する時間帯を知るためのブックマークレットです。QBハウスの店舗ページで実行すると、以下のような混雑度グラフが表示されます。</p>
-		<p>QBハウス公式サイトでは現時点の混雑度しかわかりませんが、これを見れば普段から空いている時間帯を狙ってお店に行くことができます。</p>
-
-		<img class="screenshot" src="static/images/screenshot.png" alt="混雑度グラフのスクリーンショット">
-
-		<h2>インストール方法</h2>
-		<p>以下のブックマークレットをブラウザのブックマークバーにドラッグアンドドロップして登録してください。</p>
-
-		<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://qbmeter.capybala.com/qbmeter_bookmarklet.js';})();">QB Meter</a>
-
-		<p>iPhone/Androidなどのスマホでは、ブックマークに以下のURLを登録してください。</p>
-		<input type="text" value="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://qbmeter.capybala.com/qbmeter_bookmarklet.js';})();" id="bookmarklet_url" readonly>
-
-		<h2>使い方</h2>
-		<p><a href="http://www.qbhouse.co.jp/">QBハウス公式サイト</a>で混雑度を知りたい店舗のページを開いた状態で、先ほど登録したブックマークレットをクリックすると、上のような混雑度グラフが表示されます。</p>
-		<p>モバイルのChromeをお使いの場合は、アドレスバーに登録したブックマークレットの名前を入力すると候補として表示され、それをタップすると実行できます。</p>
-
-		<h2>FAQ</h2>
-
-		<p>Q. このサイトはQBハウスと関係ありますか？</p>
-		<p>A. いいえ、QBハウスとは無関係の個人が作成したサイトです。QBハウス公式サイトでこのような機能が提供されることを願って作成しました。</p>
-
-		<!--p>データはいつのものですか？</p>
-		<p>最近1ヶ月の平均をとっています。毎週日曜日に更新しています。</p-->
-		<script>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>QB Meter | QBハウスで混雑する時間帯を知るためのブックマークレット</title>
+<link rel="stylesheet" href="static/screen.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.3"></script>
+</head>
+<body>
+<header id="header">
+		<h1><a href="./"><img src="static/images/logo.png" alt="QB Meter"></a></h1>
+</header>
+<header id="change">
+		<h1><a href="./"><img src="static/images/logo.png" alt="QB Meter"></a></h1>
+</header>
+<section id="intro_area">
+	<p class="intro">10分でカットしてくれるQBハウス、手軽ですが10分のために20分待つのは辛いですよね。<br>
+	どうせなら空いてる時間に行ってパパっと切ってもらいたい。<br>
+	そんなあなたのために、時間帯ごとの混雑状況がわかるようにしました。</p>
+</section>
+<section id="main">
+		<section>
+				<h2>これは何？</h2>
+				<p>QBハウスで混雑する時間帯を知るためのブックマークレットです。<br>
+QBハウスの店舗ページで実行すると、以下のような混雑度グラフが表示されます。</p>
+				<p>QBハウス公式サイトでは現時点の混雑度しかわかりませんが、これを見れば普段から空いている時間帯を狙ってお店に行くことができます。</p>
+				<img class="screenshot" src="static/images/screenshot.png" alt="混雑度グラフのスクリーンショット"> </section>
+		<section>
+				<h2>インストール方法</h2>
+				<p>以下のブックマークレットをブラウザのブックマークバーにドラッグアンドドロップして登録してください。</p>
+				<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://qbmeter.capybala.com/qbmeter_bookmarklet.js';})();" id="bookmarklet">QB Meter</a>
+				<p>iPhone/Androidなどのスマホでは、ブックマークに以下のURLを登録してください。</p>
+				<input type="text" value="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://qbmeter.capybala.com/qbmeter_bookmarklet.js';})();" id="bookmarklet_url" readonly>
+		</section>
+		<section>
+				<h2>使い方</h2>
+				<p><a href="http://www.qbhouse.co.jp/" target="_blank">QBハウス公式サイト</a>で混雑度を知りたい店舗のページを開いた状態で、先ほど登録したブックマークレットをクリックすると、上のような混雑度グラフが表示されます。</p>
+				<p>モバイルのChromeをお使いの場合は、アドレスバーに登録したブックマークレットの名前を入力すると候補として表示され、それをタップすると実行できます。</p>
+		</section>
+		<section>
+				<h2>FAQ</h2>
+				<p>Q. このサイトはQBハウスと関係ありますか？</p>
+				<p>A. いいえ、QBハウスとは無関係の個人が作成したサイトです。QBハウス公式サイトでこのような機能が提供されることを願って作成しました。</p>
+		</section>
+</section>
+<footer> Copyright 2014 &copy; <a href="http://capybala.com" target="_blank">capybala.com</a> All Rights Reserved. </footer>
+<!--p>データはいつのものですか？</p>
+		<p>最近1ヶ月の平均をとっています。毎週日曜日に更新しています。</p--> 
+<script>
 var input = document.getElementById('bookmarklet_url');
 input.addEventListener('click', function() {
 	this.select();
@@ -45,5 +57,6 @@ input.addEventListener('focus', function() {
 });
 input.select();
 		</script>
-	</body>
+<script src="static/init.js"></script>
+</body>
 </html>
